@@ -10,7 +10,7 @@ module Terraforming
     end
 
     def normalize_module_name(name)
-      name.gsub(/[^a-zA-Z0-9_-]/, "-")
+      name.gsub(/[^a-zA-Z0-9_]/, "_")
     end
 
     def template_path(template_name)

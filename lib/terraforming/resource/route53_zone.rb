@@ -70,7 +70,7 @@ module Terraforming
       end
 
       def module_name_of(hosted_zone)
-        normalize_module_name(name_of(hosted_zone)) << "-#{private_hosted_zone?(hosted_zone) ? 'private' : 'public'}"
+        normalize_module_name(name_of(hosted_zone) << "-#{private_hosted_zone?(hosted_zone) ? 'private' : 'public'}")
       end
 
       def private_hosted_zone?(hosted_zone)
